@@ -6,7 +6,7 @@
 授業内容はC-learningを参照してください．
 
 
-## Contents（適宜更新します）
+## Contents
 
 - [RとRstudioのインストール方法](./install/)
 - R-notebookの使い方(準備中)
