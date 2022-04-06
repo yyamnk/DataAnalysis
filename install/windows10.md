@@ -63,8 +63,13 @@ RとRstudioをインストールする前に，使っているPCのユーザア�
 
 ### Rのインストール動画
 
+[Youtube: RとRStudioのインストール](https://www.youtube.com/watch?v=hOq1HbtwKcs)
 [![](https://img.youtube.com/vi/hOq1HbtwKcs/0.jpg)](https://www.youtube.com/watch?v=hOq1HbtwKcs)
 
+> 補足
+>
+> 動画では，インストーラはC-learningのリンクから取得していますが，
+> [r-project](https://cran.r-project.org/)から取得してください．
 
 
 # RStudioのインストール
@@ -86,3 +91,9 @@ RとRstudioをインストールする前に，使っているPCのユーザア�
 
 [Youtube: RとRStudioのインストール，03:29〜](https://www.youtube.com/watch?v=hOq1HbtwKcs&t=209s)
 [![](https://img.youtube.com/vi/hOq1HbtwKcs/0.jpg)](https://www.youtube.com/watch?v=hOq1HbtwKcs&t=209s)
+
+
+> 補足
+>
+> 動画では，インストーラはC-learningのリンクから取得していますが，
+> [rstudio.com](https://www.rstudio.com/products/rstudio/download/)から取得してください．
