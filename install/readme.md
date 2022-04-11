@@ -9,4 +9,4 @@ R, Rstudioのインストールは，使用しているOSにより異なりま�
 
 - [Windows 10](./windows10.md)
 - [Windows 11](./windows11.md)
-- (準備中)[Mac](./mac.md)
+- [Mac](./macos.md)
