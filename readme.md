@@ -8,6 +8,7 @@
 
 ## Contents
 
-- [RとRstudioのインストール方法](./install/)
+- [RとRStudioのインストール方法](./install/)
+- [RStudioの設定](./settings/)
 - [パッケージのインストール方法](./install_pkg/)
 - (準備中)R-notebookの使い方
