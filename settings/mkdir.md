@@ -23,4 +23,8 @@
 4. 右クリック 
 5. 新規フォルダ
     ![](./figs/mac_mkdir2.png?raw=true)
-4. ディレクトリ名を`DataAnalysis`にする
+6. ディレクトリ名を`DataAnalysis`にする
+7. 作成したDataAnalysisを右クリック -> エイリアスを作成 -> デスクトップにドラッグ
+    ![](./figs/mac_mkdir3.png?raw=true)
+
+以降，デスクトップのエイリアスを開けば，`DataAnalysis`ディレクトリが開けるようになる．
