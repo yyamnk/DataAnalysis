@@ -16,5 +16,6 @@
     - これを実行する
     - plot結果が出力されることを確認する
     - 同時に，Consoleで，コードChunkのコードが実行されたことを確認する．
+    ![](./figs/new_notebook5.png?raw=true)
     
 ここまでできていれば，準備はOK

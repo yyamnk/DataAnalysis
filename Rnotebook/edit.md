@@ -13,6 +13,7 @@
     - 保存先は，作成した授業用のディレクトリ`DataAnalysis`の中とする．
     - ファイル名は，適当な名前，例えば`sample_nbook`とする．
     - エラーが生じる場合があるので，ファイル名に全角文字は含めないこと．
+        ![](./figs/save_notebook.png?raw=true)
 
 ### Word変換
 
