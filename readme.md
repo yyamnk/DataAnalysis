@@ -12,4 +12,5 @@
 - [RとRStudioのアンインストール方法](./uninstall/)
 - [RStudioの設定](./settings/)
 - [R-notebookの使い方](./Rnotebook/)
+- [Rの基本的なコマンド](./usage_r.md)
 - (準備中)[パッケージのインストール方法](./install_pkg/)

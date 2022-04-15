@@ -8,4 +8,4 @@ Rnotebookとは，通常のテキストに加えて，Rのコードおよびそ�
 ## Contents
 
 - [準備](./install.md)
-- [Rnotebookの作成と編集方法](./edit.md)
+- [Rnotebookの使い方](./edit.md)
