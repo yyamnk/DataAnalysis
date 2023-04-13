@@ -8,9 +8,10 @@
 
 ## Contents
 
-- [RとRStudioのインストール方法](./install/)
+- 主に第1回授業に関連
+    - [RとRStudioのインストール方法](./install/)
+    - [Rの基本的なコマンド](./usage_r.md)
 - [RとRStudioのアンインストール方法](./uninstall/)
 - [RStudioの設定](./settings/)
 - [R-notebookの使い方](./Rnotebook/)
-- [Rの基本的なコマンド](./usage_r.md)
 - [パッケージのインストール方法, rstan](./install_pkg/)

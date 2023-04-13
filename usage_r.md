@@ -1,3 +1,9 @@
+# RStudioの使い方
+
+- RStudioの概要 [第1回授業動画 5:25～](https://youtu.be/D_CBlEg2u40?t=324)
+- コンソールの使い方 [第1回授業動画 6:18～](https://youtu.be/D_CBlEg2u40?t=378)
+
+
 # R言語の基本的なコマンド
 
 ここに示すのはR言語のごく一部です．
