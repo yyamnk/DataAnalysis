@@ -8,5 +8,5 @@ R, Rstudioのインストールは，使用しているOSにより異なりま�
 ## OS別　インストール方法
 
 - [Windows 10](./windows10.md)
-- [Windows 11](./windows11.md)
+- [Windows 11](./windows11_2023.md)
 - [Mac](./macos.md)
