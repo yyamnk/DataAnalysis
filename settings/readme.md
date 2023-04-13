@@ -14,3 +14,4 @@
 
 
 - [(optional) スタートメニューに追加する](./shortcut.md)
+- [(optional) proxy環境下で通信できるようにする](./proxy.md)
