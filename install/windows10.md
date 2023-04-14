@@ -92,7 +92,9 @@ RとRstudioをインストールする前に，使っているPCのユーザア�
     - 表示されたインストール先が`C:¥Program Files¥`の配下でない場合は，使用しているアカウントに問題がある可能性が高い．前述の「インストール前の確認」を再度確認すること．
 6. 残りは全て`次へ`を選択する．
 7. RStudioを起動する．
-8. Packaseg > install を開き，`Install to Library`の表示が，`C:/Users/ユーザ名/Documents/R/win-library/バージョン番号`となっていることを確認する．
+8. Packaseg > install を開き，`Install to Library`の表示が，
+    `C:/Users/ユーザ名/AppData/Local/R/win-library/バージョン番号`となっていることを確認する．
+        - ユーザ名とバージョン番号は各自で異なるので，適宜読み替えること
     - ユーザ名とバージョン番号は各自で異なるので，適宜読み替えること
 
 ### R studioのインストール動画
