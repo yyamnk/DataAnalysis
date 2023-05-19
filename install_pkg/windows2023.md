@@ -6,9 +6,7 @@ Windows11で確認しています．
 参考：[github/Configuring C Toolchain for Windows](https://github.com/stan-dev/rstan/wiki/Configuring-C---Toolchain-for-Windows)
 
 
-# インストール前の確認
-
-## STEP 1-1:ユーザ名とアカウント権限の確認
+# STEP 1:ユーザ名とアカウント権限の確認
 
 ### for windows 10
 
@@ -25,19 +23,18 @@ Windows11で確認しています．
 - [R, RstudioのインストールのSTEP1-2](https://github.com/yyamnk/DataAnalysis/blob/master/install/windows11_2023.md#step-1-2-%E7%AE%A1%E7%90%86%E8%80%85%E6%A8%A9%E9%99%90%E3%81%AE%E7%A2%BA%E8%AA%8D%E3%81%A8%E5%A4%89%E6%9B%B4)を参照し，管理者権限があること．
 
 
-## STEP 1-2: パッケージのインストール先の確認
+# STEP 2: パッケージのインストール先の確認
 
 1. RStudioの右下にあるPackagesタブを開く
 2. Installタブを開く
     ![](./win_step1.png?raw=true)
 3. Install to Libraryを確認
-    - `Install to Library`の表示が，
-        - R4.2.xの場合: `C:/Users/ユーザ名/AppData/Local/R/win-library/バージョン番号` 
+    - `Install to Library`の表示が，`C:/Users/ユーザ名/AppData/Local/R/win-library/バージョン番号` となっていることを確認．
         - `ユーザ名`と`バージョン番号`は各自で異なるので，適宜読み替えること．
     ![](./win_step2.png?raw=true)
 
 
-# STEP 2: Rtoolsをインストールする
+# STEP 3: Rtoolsをインストールする
 
 1. 図のように，RStudioのコンソールに
     ```r
@@ -59,7 +56,7 @@ Windows11で確認しています．
     - 選択肢は全てデフォルトのまま，インストールする
 
 
-# STEP 3: Rstanのパッケージをインストールする．
+# STEP 4: Rstanのパッケージをインストールする．
 
 1. Rstudioのコンソールに，
     ```r

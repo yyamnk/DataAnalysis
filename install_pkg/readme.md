@@ -6,6 +6,8 @@ Rstanのインストールは，使用しているOSにより異なります．
 
 ## OS別　インストール方法
 
-- [Mac](./macos.md)
 - [Windows 10, Windows11](./windows2023.md)
+
+- [Mac (intel)](../install/macos-intel.md#rstanのインストール)
+- [Mac (M1/M2)](../install/macos-m1.md#rstanのインストール)
 
