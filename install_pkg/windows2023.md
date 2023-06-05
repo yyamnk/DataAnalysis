@@ -64,6 +64,22 @@ Windows11で確認しています．
     install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
     ```
     と打ち込み，インストールする．
+    このとき，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
 2. コンソールに`library('rstan')`と打つ（下図の⑥）
 3. このときPackagesタブのrstanにチェックが入ればインストールできている．
     ![](./win_step5.png?raw=true)
+
+
+# もしrstanが実行できない場合
+
+2023/06/05の時点で既知の問題として，R-4.3.0の場合には，デフォルトでインストールされる`rstan`のバージョンが古いことに起因するトラブルが報告されています．
+その場合には，以下の手順で`rstan`を再インストールしてください．
+
+1. Packagesタブから`rstan`を探し，xを押してrstanをアンインストールする．
+2. 念のためRStudioを再起動する．
+3. 上記のSTEP4に従ってrstanをインストールする．このとき，
+    ```r
+    install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+    ```
+    を実行後に，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
+
