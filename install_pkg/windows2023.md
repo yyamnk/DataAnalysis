@@ -65,9 +65,21 @@ Windows11で確認しています．
     ```
     と打ち込み，インストールする．
     このとき，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
-2. コンソールに`library('rstan')`と打つ（下図の⑥）
-3. このときPackagesタブのrstanにチェックが入ればインストールできている．
-    ![](./win_step5.png?raw=true)
+
+# STEP 5: rstanの動作確認
+
+Rstudioのコンソールに，
+```r
+library(rstan)
+(stan(model_code="parameters {real p;} model {p~normal(0,1);}"))
+```
+と打ち込む．
+
+実行に時間がかかるので，しばらく待つ．
+正常に完了すると，以下のように表示されるはず．これが表示されればrstanは正常にインストールできている．
+
+![](./win_step5-2.png?raw=true)
+
 
 
 # もしrstanが実行できない場合
@@ -83,3 +95,28 @@ Windows11で確認しています．
     ```
     を実行後に，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
 
+
+
+# よくあるエラーとその対処法
+
+## 事例1: Rtoolsのインストールができていない
+
+- エラーの例
+    - Rstudioのコンソールに以下のように表示される．
+    ```r
+    WARNING: Rtools is required to build R packages, but is not currently installed.
+
+    Please download and install Rtools 4.2 from https://cran.r-project.org/bin/windows/Rtools/ or https://www.r-project.org/nosvn/winutf8/ucrt3/.
+    WARNING: Rtools is required to build R packages, but is not currently installed.
+    ```
+
+- 対処方法: Rtoolsとパッケージの再インストール
+
+1. rstanとStanHeadersをアンインストールする．
+    - RstudioのPackagesタブからrstanとStanHeadersを探し，xを押してこれらをアンインストールする．
+2. 既存のRtools（がある場合は）アンインストールする．
+    - 方法は，[RとRstudioのアンインストール方法 > windows11](https://github.com/yyamnk/DataAnalysis/blob/master/uninstall/windows11.md)に書いてある通り．
+    - 検索しても既存のRtoolsがない場合は，次のステップに進む．
+3. （念のため）PCを再起動する．
+4. パッケージをインストールする．
+    - 方法は，このページに書いてある通り
