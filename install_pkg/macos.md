@@ -1,36 +1,38 @@
 # RStanのインストール for macOS
 
-このガイドは，2022年4月9日に作成されました．macOS 12.1 (Monterey) で確認しています．
+このガイドは，2024年5月21日に作成されました．macOS 13.3 (Ventura) で確認しています．
 
-# RStanのインストール
+## インストール
 
-1. App StoreからXcodeをインストールする．(Apple IDが必要)
-2. まだコマンドライン・デベロッパツールをインストールしていない場合は，ターミナルを開き，以下のように入力してインストールする．
+[RStan Getting Started](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started) の説明を基に，手順を簡単にまとめました．
+
+以下の手順は，電源に接続した状態，かつ安定したネット環境で実行することをおすすめします．
+
+1. RStudioを起動する．
+2. コンソールから以下のように入力する．コマンドライン・デベロッパツールをインストールするか聞かれた場合は「インストール」を選ぶ．
     ```sh
-    xcode-select --install
+    install.packages("remotes")
+    remotes::install_github("coatless-mac/macrtools")
     ```
-
-3. [gfortran for Monterey Intel](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/11.2-monterey-intel/gfortran-Intel-11.2-Monterey.dmg)をダウンロードし、ディスクイメージ `gfortran-Intel-11.2-Monterey.dmg`を開く．パッケージ `gfortran.pkg` を開く。指示に従ってインストーラの操作を進める．「インストール」を押して管理者の名前とパスワードを聞かれた場合には入力する．
-
-    以上は macOS 12.1 (Monterey) の場合．これ以外の macOS を使っている場合は、 <https://github.com/fxcoudert/gfortran-for-macOS/> から適当な版を選んでインストールする．
-
-3. RStudioを起動する．
+3. コンソールから以下のように入力する．パスワードを聞かれるので入力すると RTools のインストールが始まる．これには15分程度を要する．
+    ```sh
+    macrtools::macos_rtools_install()
+    ```
+    成功すれば，"Congratulations! Xcode CLI, Gfortran, and R developer binaries have been installed successfully." と表示される．
 4. コンソールから以下のように入力する．
     ```sh
-    install.packages(c("remotes", "Rcpp", "RcppArmadillo"))
+    install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
     ```
+これで RStan がインストールできた．
 
-5. コンソールから以下のように入力する．
-    ```sh
-    remotes::install_git("https://github.com/hsbadr/rstan", subdir = "StanHeaders", ref = "develop")
-    ```
+## テスト
+コンソールから以下のように入力する．
+```r
+library(rstan)
+(stan(model_code="parameters {real p;} model {p~normal(0,1);}"))
+```
+実行に時間がかかるので，しばらく待つ．
 
-   「パッケージのソースからインストールを行いますか？」と聞かれた場合にはnoと入力する．
+正常に完了すると，以下のように表示されるはず．これが表示されればRStanは正常にインストールできている．
 
-6. コンソールから以下のように入力する．
-    ```sh
-    remotes::install_git("https://github.com/hsbadr/rstan", subdir = "rstan/rstan", ref = "develop")
-    ```
-
-
-これで RStan がインストールできたので、RStudio のコンソールから `library(rstan)` と入力して RStan を読み込めることを確認する．
+![](./win_step5-2.png?raw=true)
