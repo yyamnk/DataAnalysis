@@ -87,26 +87,6 @@ library(rstan)
 
 
 
-# もしrstanが実行できない場合
-
-何らかの原因で，`rstan`のインストールに失敗している事例が報告されています．
-その場合には，以下の手順で`rstan`を再インストールしてください．
-
-1. 一度，rstanをアンインストールする．Rstudioのコンソールに，
-    ```r
-    remove.packages("rstan")
-    if (file.exists(".RData")) file.remove(".RData")
-    ```
-    と打ち込む．
-2. 念のためRStudioを再起動する．
-3. 上記のSTEP4に従ってrstanをインストールする．このとき，
-    ```r
-    install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
-    ```
-    を実行後に，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
-
-
-
 # よくあるエラーとその対処法
 
 ## 事例1: Rtoolsのインストールができていない
@@ -132,11 +112,31 @@ library(rstan)
     - 方法は，[RとRstudioのアンインストール方法 > windows11](https://github.com/yyamnk/DataAnalysis/blob/master/uninstall/windows11.md)に書いてある通り．
     - 検索しても既存のRtoolsがない場合は，次のステップに進む．
 3. （念のため）PCを再起動する．
-4. パッケージをインストールする．
+4. Rtoolsをインストールし，`rstan`パッケージをインストールする．
     - 方法は，このページに書いてある通り
 
 
-## 上記にないエラーへの対処法
+## 事例2: Rtoolsはインストールできているが，rstanが実行できない
+
+事例1のエラーが出ないものの，他の何らかの原因で，`rstan`のインストールに失敗している場合があります．
+
+- 対処方法: `rstan`のみを再インストール
+
+1. 一度，rstanをアンインストールする．Rstudioのコンソールに，
+    ```r
+    remove.packages("rstan")
+    if (file.exists(".RData")) file.remove(".RData")
+    ```
+    と打ち込む．
+2. 念のためRStudioを再起動する．
+3. 上記のSTEP4に従ってrstanをインストールする．このとき，
+    ```r
+    install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
+    ```
+    を実行後に，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
+
+
+## 上記の方法でも解決できない場合の対処法
 
 以下は上級者向けです．
 以下の対処をする前に，まずは教員へ相談することをおすすめします．
