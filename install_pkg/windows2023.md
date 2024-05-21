@@ -1,9 +1,9 @@
 # RStanのインストール for Windows
 
-このガイドは，2023年5月19日に更新されました．
+このガイドは，2024年5月21日に更新されました．
 Windows11で確認しています．
 
-参考：[github/Configuring C Toolchain for Windows](https://github.com/stan-dev/rstan/wiki/Configuring-C---Toolchain-for-Windows)
+参考：[github/Rstan Getting Started](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started)
 
 
 # STEP 1:ユーザ名とアカウント権限の確認
@@ -89,14 +89,15 @@ library(rstan)
 
 # もしrstanが実行できない場合
 
-2023/06/05の時点で既知の問題として，R-4.3.0の場合には，デフォルトでインストールされる`rstan`のバージョンが古いことに起因するトラブルが報告されています．
+何らかの原因で，`rstan`のインストールに失敗している事例が報告されています．
 その場合には，以下の手順で`rstan`を再インストールしてください．
 
-1. 一度，rstanをアンインストールする．
+1. 一度，rstanをアンインストールする．Rstudioのコンソールに，
     ```r
     remove.packages("rstan")
     if (file.exists(".RData")) file.remove(".RData")
     ```
+    と打ち込む．
 2. 念のためRStudioを再起動する．
 3. 上記のSTEP4に従ってrstanをインストールする．このとき，
     ```r
@@ -121,8 +122,12 @@ library(rstan)
 
 - 対処方法: Rtoolsとパッケージの再インストール
 
-1. rstanとStanHeadersをアンインストールする．
-    - RstudioのPackagesタブからrstanとStanHeadersを探し，xを押してこれらをアンインストールする．
+1. 一度，rstanをアンインストールする．Rstudioのコンソールに，
+    ```r
+    remove.packages("rstan")
+    if (file.exists(".RData")) file.remove(".RData")
+    ```
+    と打ち込む．
 2. 既存のRtools（がある場合は）アンインストールする．
     - 方法は，[RとRstudioのアンインストール方法 > windows11](https://github.com/yyamnk/DataAnalysis/blob/master/uninstall/windows11.md)に書いてある通り．
     - 検索しても既存のRtoolsがない場合は，次のステップに進む．
