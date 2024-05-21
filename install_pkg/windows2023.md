@@ -43,6 +43,12 @@ Windows11で確認しています．
     と打ち込み，使用しているRのバージョンを確認する．
     ![](check_Rversion.png)
 
+- 使用しているのが，R4.4.xだった場合（xは任意）
+    - [Rtools4.4の配布元ページ](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html)にアクセスし，`Rtools44 installer`のリンクからインストーラをダウンロードする．
+        ![](./rtools44.png?raw=true)
+    - ダウンロードしたインストーラ`rtools44-XXXX-XXXX.exe`を実行する．
+    - 選択肢は全てデフォルトのまま，インストールする
+
 - 使用しているのが，R4.3.xだった場合（xは任意）
     - [Rtools4.3の配布元ページ](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html)にアクセスし，`Rtools43 installer`のリンクからインストーラをダウンロードする．
         ![](./rtools43.png?raw=true)
@@ -60,8 +66,7 @@ Windows11で確認しています．
 
 1. Rstudioのコンソールに，
     ```r
-    install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-    install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+    install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
     ```
     と打ち込み，インストールする．
     このとき，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
@@ -87,11 +92,15 @@ library(rstan)
 2023/06/05の時点で既知の問題として，R-4.3.0の場合には，デフォルトでインストールされる`rstan`のバージョンが古いことに起因するトラブルが報告されています．
 その場合には，以下の手順で`rstan`を再インストールしてください．
 
-1. Packagesタブから`rstan`を探し，xを押してrstanをアンインストールする．
+1. 一度，rstanをアンインストールする．
+    ```r
+    remove.packages("rstan")
+    if (file.exists(".RData")) file.remove(".RData")
+    ```
 2. 念のためRStudioを再起動する．
 3. 上記のSTEP4に従ってrstanをインストールする．このとき，
     ```r
-    install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+    install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
     ```
     を実行後に，「パッケージのソースからインストールを行いますか？（コンパイルが必要です）」というダイアログが出たら，はい（Y）を選ぶ．
 
@@ -132,6 +141,6 @@ library(rstan)
 2. 既存のRに関連するフォルダを削除する．
     - `C:/Users/ユーザ名/AppData/local/R`の削除
         - `ユーザ名`は各自で異なるので，適宜読み替えること．
-    - `C:\rtools42`または`C:\rtools43`の削除
+    - `C:\rtools44`または`C:\rtools43`，`C:\rtools42`の削除
 3. Rの再インストール
 4. 上記のSTEP3以降を実行
