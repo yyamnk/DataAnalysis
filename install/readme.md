@@ -15,9 +15,4 @@ R, Rstudioのインストールは，使用しているOSにより異なりま�
 
 ### Mac
 
-<!---
-[Mac](./macos.md)
--->
-
-- [intel Mac](./macos-intel.md)
-- [M1/M2 Mac](./macos-m1.md)
+- [Mac](./macos.md)
