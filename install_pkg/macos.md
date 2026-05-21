@@ -1,6 +1,6 @@
 # RStanのインストール for macOS
 
-このガイドは，2024年5月21日に作成されました．macOS 13.3 (Ventura) で確認しています．
+このガイドは，2026年4月7日に作成されました．macOS 15.6 (Sequoia) で確認しています．
 
 ## インストール
 
@@ -14,7 +14,7 @@
     install.packages("remotes")
     remotes::install_github("coatless-mac/macrtools")
     ```
-3. コンソールから以下のように入力する．パスワードを聞かれるので入力すると RTools のインストールが始まる．これには15分程度を要する．
+3. コンソールから以下のように入力する．パスワードを聞かれるので入力すると RTools のインストールが始まる．
     ```sh
     macrtools::macos_rtools_install()
     ```
