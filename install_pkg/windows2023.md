@@ -13,7 +13,7 @@ Windows11で確認しています．
 次のリンク先にある，「インストール前の確認」をよく読み，問題ないことを確認してください．
 誤ったユーザ名やアカウントを使った場合，RStanのインストールに失敗します．
 
-- [for Windows10](https://github.com/yyamnk/DataAnalysis/blob/master/install/windows10.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%89%8D%E3%81%AE%E7%A2%BA%E8%AA%8D): 
+- [for Windows10](https://github.com/yyamnk/DataAnalysis/blob/master/install/windows10.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%89%8D%E3%81%AE%E7%A2%BA%E8%AA%8D):
 
 ### for windows 11
 
@@ -43,6 +43,11 @@ Windows11で確認しています．
     と打ち込み，使用しているRのバージョンを確認する．
     ![](check_Rversion.png)
 
+- 使用しているのが，R4.5.xだった場合（xは任意）
+    - [Rtools4.5の配布元ページ](https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html)にアクセスし，`Rtools45 installer`のリンクからインストーラをダウンロードする．
+        ![](./rtools45.png?raw=true)
+    - ダウンロードしたインストーラ`rtools45-XXXX-XXXX.exe`を実行する．
+    - 選択肢は全てデフォルトのまま，インストールする
 - 使用しているのが，R4.4.xだった場合（xは任意）
     - [Rtools4.4の配布元ページ](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html)にアクセスし，`Rtools44 installer`のリンクからインストーラをダウンロードする．
         ![](./rtools44.png?raw=true)
